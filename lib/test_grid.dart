@@ -1,3 +1,4 @@
+import 'package:estimatrix/core/board_manager.dart';
 import 'package:estimatrix/models/table_square.dart';
 import 'package:estimatrix/models/user_avatar.dart';
 import 'package:estimatrix/widgets/user_avatar_widget.dart';
@@ -80,6 +81,8 @@ class _GridWidgetState extends State<GridWidget> {
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 12,
         childAspectRatio: 1,
+        crossAxisSpacing: 1,
+        mainAxisSpacing: 1,
         children: boardTargets
             .map(
               (item) => item.filledAvatar != null
@@ -94,7 +97,7 @@ class _GridWidgetState extends State<GridWidget> {
                           : Container(
                               height: 35,
                               width: 35,
-                              color: Colors.black,
+                              color: BoardManager().getBoardFieldColor(item.id),
                             ),
                       feedback: Container(
                         height: 35,
@@ -104,7 +107,7 @@ class _GridWidgetState extends State<GridWidget> {
                       childWhenDragging: Container(
                         height: 35,
                         width: 35,
-                        color: Colors.black,
+                        color: BoardManager().getBoardFieldColor(item.id),
                       ),
                       onDragCompleted: () {
                         item.filledAvatar = null;
@@ -117,7 +120,7 @@ class _GridWidgetState extends State<GridWidget> {
                         rejectedData,
                       ) {
                         return Container(
-                          color: Colors.black,
+                          color: BoardManager().getBoardFieldColor(item.id),
                         );
                       },
                       onWillAccept: (data) {
