@@ -1,6 +1,6 @@
 import 'package:estimatrix/models/user_avatar.dart';
 import 'package:estimatrix/widgets/estimation_board_widget.dart';
-import 'package:estimatrix/widgets/user_avatar_widget.dart';
+import 'package:estimatrix/widgets/user_avatar_section_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -43,7 +43,7 @@ class _MainPageState extends State<MainPage> {
                     .map(
                       (avatar) => Padding(
                         padding: const EdgeInsets.only(bottom: 50),
-                        child: UserAvatarWidget(
+                        child: UserAvatarSectionWidget(
                           userAvatar: avatar,
                         ),
                       ),
