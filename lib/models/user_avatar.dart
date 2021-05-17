@@ -1,6 +1,5 @@
+import 'package:estimatrix/enums/estimation_status.dart';
 import 'package:flutter/material.dart';
-
-enum EstimationStatus { done, waiting, moving }
 
 class UserAvatar {
   final String id;
@@ -20,16 +19,6 @@ class UserAvatar {
     required this.position,
     this.isDragFinished = false,
   });
-
-  factory UserAvatar.ghost(UserAvatar userAvatar) {
-    return UserAvatar(
-      id: userAvatar.id,
-      color: Colors.grey,
-      name: userAvatar.name,
-      status: userAvatar.status,
-      position: userAvatar.position,
-    );
-  }
 
   @override
   toString() {
