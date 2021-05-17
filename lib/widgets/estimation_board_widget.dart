@@ -1,74 +1,18 @@
 import 'package:estimatrix/core/board_manager.dart';
 import 'package:estimatrix/models/table_square.dart';
 import 'package:estimatrix/models/user_avatar.dart';
-import 'package:estimatrix/widgets/user_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
-class TestGridPage extends StatefulWidget {
-  @override
-  _TestGridPageState createState() => _TestGridPageState();
-}
+class EstimationBoardWidget extends StatefulWidget {
+  final Function onDragFinish;
 
-class _TestGridPageState extends State<TestGridPage> {
-  List<UserAvatar> userList = [
-    UserAvatar(id: '1', name: 'larissa', color: Colors.cyan, position: 0),
-    UserAvatar(id: '2', name: 'laguna', color: Colors.pink, position: 1),
-    UserAvatar(id: '3', name: 'batata', color: Colors.green, position: 2),
-    UserAvatar(id: '4', name: 'polenta', color: Colors.purple, position: 3)
-  ];
+  const EstimationBoardWidget({required this.onDragFinish});
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              GridWidget(
-                onTest: (avatar) {
-                  setState(
-                    () {
-                      userList
-                          .where((user) => user.id == avatar.id)
-                          .first
-                          .isDragFinished = true;
-                    },
-                  );
-                },
-              ),
-              Column(
-                children: userList
-                    .map(
-                      (avatar) => Padding(
-                        padding: const EdgeInsets.only(bottom: 50),
-                        child: UserAvatarWidget(
-                          userAvatar: avatar,
-                        ),
-                      ),
-                    )
-                    .toList(),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+  _EstimationBoardWidgetState createState() => _EstimationBoardWidgetState();
 }
 
-class GridWidget extends StatefulWidget {
-  final Function onTest;
-
-  const GridWidget({required this.onTest});
-
-  @override
-  _GridWidgetState createState() => _GridWidgetState();
-}
-
-class _GridWidgetState extends State<GridWidget> {
+class _EstimationBoardWidgetState extends State<EstimationBoardWidget> {
   final boardTargets =
       List.generate(144, (index) => TableSquareModel(id: '$index'));
 
@@ -128,7 +72,7 @@ class _GridWidgetState extends State<GridWidget> {
                       },
                       onAccept: (avatar) {
                         print("avatar $avatar");
-                        widget.onTest(avatar);
+                        widget.onDragFinish(avatar);
                         setState(() {
                           item.filledAvatar = avatar as UserAvatar;
                         });
