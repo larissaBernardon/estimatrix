@@ -2,10 +2,10 @@ import 'package:estimatrix/enums/estimation_status.dart';
 import 'package:estimatrix/models/user_avatar.dart';
 import 'package:flutter/material.dart';
 
-class UserAvatarWidget extends StatelessWidget {
+class UserAvatarSectionWidget extends StatelessWidget {
   final UserAvatar userAvatar;
 
-  UserAvatarWidget({required this.userAvatar});
+  UserAvatarSectionWidget({required this.userAvatar});
   @override
   Widget build(BuildContext context) {
     return Row(children: [

@@ -29,3 +29,5 @@ Após finalizada, o moderador conclui a tarefa atual e automaticamente é passad
 
 ### Possibilidade futuras
 Mostrarmos histórico de estimativas
+
+
