@@ -1,7 +1,8 @@
-import 'package:estimatrix/models/user_avatar.dart';
-import 'package:estimatrix/widgets/estimation_board_widget.dart';
-import 'package:estimatrix/widgets/user_avatar_section_widget.dart';
 import 'package:flutter/material.dart';
+
+import 'core/models/user_avatar.dart';
+import 'core/widgets/estimation_board_widget.dart';
+import 'core/widgets/user_avatar_section_widget.dart';
 
 class MainPage extends StatefulWidget {
   @override

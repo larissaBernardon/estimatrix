@@ -1,8 +1,9 @@
 import 'package:estimatrix/core/board_manager.dart';
-import 'package:estimatrix/models/table_square.dart';
-import 'package:estimatrix/models/user_avatar.dart';
-import 'package:estimatrix/widgets/user_avatar_section_widget.dart';
+import 'package:estimatrix/core/models/user_avatar.dart';
 import 'package:flutter/material.dart';
+
+import 'core/models/table_square.dart';
+import 'core/widgets/user_avatar_section_widget.dart';
 
 class TestGridPage extends StatefulWidget {
   @override
