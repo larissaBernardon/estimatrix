@@ -19,6 +19,7 @@ class SessionPage extends StatelessWidget {
             SizedBox(
               width: 600,
               child: TextField(
+                style: TextStyle(color: AppColors.accentPurple),
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: AppColors.primaryPurple),

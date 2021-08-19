@@ -1,6 +1,6 @@
 import 'package:estimatrix/core/board_manager.dart';
-import 'package:estimatrix/models/table_square.dart';
-import 'package:estimatrix/models/user_avatar.dart';
+import 'package:estimatrix/core/models/table_square.dart';
+import 'package:estimatrix/core/models/user_avatar.dart';
 import 'package:flutter/material.dart';
 
 class EstimationBoardWidget extends StatefulWidget {

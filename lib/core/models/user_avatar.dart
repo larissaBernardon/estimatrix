@@ -1,4 +1,4 @@
-import 'package:estimatrix/enums/estimation_status.dart';
+import 'package:estimatrix/core/enums/estimation_status.dart';
 import 'package:flutter/material.dart';
 
 class UserAvatar {

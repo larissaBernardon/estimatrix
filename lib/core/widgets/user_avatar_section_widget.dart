@@ -1,5 +1,5 @@
-import 'package:estimatrix/enums/estimation_status.dart';
-import 'package:estimatrix/models/user_avatar.dart';
+import 'package:estimatrix/core/enums/estimation_status.dart';
+import 'package:estimatrix/core/models/user_avatar.dart';
 import 'package:flutter/material.dart';
 
 class UserAvatarSectionWidget extends StatelessWidget {
