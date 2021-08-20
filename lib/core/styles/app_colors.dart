@@ -9,6 +9,7 @@ class AppColors {
   static Color accentPurple = const Color(0xFFF2B4FD);
   static Color supportPurple = const Color(0xFFBA68C8);
   static Color appPurple = const Color(0xFF6A1B9A);
+  static Color primaryGray = const Color(0xFFE4E4E4);
 }
 
 class _GridColors {
