@@ -1,15 +1,16 @@
+import 'package:estimatrix/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class BoardManager {
   Color getBoardFieldColor(String colorId) {
     if (containerXL.contains(colorId)) {
-      return Colors.purple.shade800;
+      return AppColors.gridColors.xlColor;
     } else if (containerL.contains(colorId)) {
-      return Colors.purple.shade700;
+      return AppColors.gridColors.lColor;
     } else if (containerM.contains(colorId)) {
-      return Colors.purple.shade500;
+      return AppColors.gridColors.mColor;
     } else if (containerS.contains(colorId)) {
-      return Colors.purple.shade300;
+      return AppColors.gridColors.sColor;
     } else {
       return Colors.red;
     }
